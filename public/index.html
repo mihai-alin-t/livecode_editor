@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>livecode</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="name-modal">
+    <div id="name-dialog">
+      <div class="name-logo">livecode</div>
+      <label for="name-input">Your name</label>
+      <input id="name-input" type="text" maxlength="24" placeholder="Anonymous" autocomplete="off" spellcheck="false">
+      <button id="name-submit">Join session</button>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-left">
+      <span class="logo">livecode</span>
+      <span id="room-label"></span>
+    </div>
+    <div class="header-center">
+      <select id="lang-select">
+        <option value="javascript">JavaScript</option>
+        <option value="typescript">TypeScript</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+      </select>
+    </div>
+    <div class="header-right">
+      <div id="presence"></div>
+      <button id="undo-btn"  disabled title="Shared undo (undoes last op for everyone)">↩ Undo</button>
+      <button id="reset-btn" disabled>↺ Reset</button>
+      <button id="chat-toggle" title="Toggle chat">💬</button>
+    </div>
+  </header>
+
+  <div id="main">
+    <div id="editor"></div>
+    <div id="chat-panel">
+      <div id="chat-messages"></div>
+      <div id="chat-typing"></div>
+      <div id="chat-input-row">
+        <input id="chat-input" type="text" maxlength="500" placeholder="Message…" autocomplete="off">
+        <button id="chat-send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="bundle.js"></script>
+</body>
+</html>

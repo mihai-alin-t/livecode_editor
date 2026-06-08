@@ -1,0 +1,20 @@
+{
+  "name": "livecode-editor",
+  "version": "1.0.0",
+  "description": "Real-time collaborative code editor over WebSockets",
+  "main": "server.js",
+  "scripts": {
+    "build": "esbuild public/client.js --bundle --outfile=public/bundle.js",
+    "start": "npm run build && node server.js"
+  },
+  "dependencies": {
+    "@codemirror/lang-css": "^6.3.1",
+    "@codemirror/lang-html": "^6.4.11",
+    "@codemirror/lang-javascript": "^6.2.5",
+    "codemirror": "^6.0.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
